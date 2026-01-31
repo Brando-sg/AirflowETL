@@ -324,9 +324,10 @@ def load_dw_func(**kwargs):
 default_args = {'owner': 'airflow', 'retries': 1}
 
 with DAG(
-    'etl_classic_operators',
+    'etl_company_order',
     default_args=default_args,
-    schedule=None,
+    schedule='20,50 * * * *',
+    description='ETL de ordenes de la empresa para dos sucursales Web y Catalog',
     start_date=datetime(2026, 1, 1),
     catchup=False,
     tags=['ETL', 'Final', 'DWH']
