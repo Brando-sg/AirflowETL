@@ -283,7 +283,7 @@ with DAG(
     default_args=default_args,
     schedule='20,50 * * * *',
     description='ETL de ordenes de la empresa para dos sucursales Web y Catalog',
-    start_date=datetime(2026, 1, 1),
+    start_date=datetime(2026, 1, 30),
     catchup=False,
     tags=['ETL', 'Final', 'DWH']
 ) as dag:
